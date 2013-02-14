@@ -42,6 +42,12 @@ public class ShareActivity extends AuthenticatedActivity {
         
         if(intent.getAction().equals(Intent.ACTION_SEND)) {
             mediaUri = (Uri) intent.getParcelableExtra(Intent.EXTRA_STREAM);
+            final String  source;
+            if(intent.hasExtra(UploadService.EXTRA_SOURCE)) {
+                source = intent.getStringExtra(UploadService.EXTRA_SOURCE);
+            } else {
+                source = Contribution.SOURCE_EXTERNAL;
+            }
             
             final String mimeType = intent.getType();
             if(mimeType.startsWith("image/")) {
@@ -58,6 +64,7 @@ public class ShareActivity extends AuthenticatedActivity {
                     uploadIntent.putExtra(UploadService.EXTRA_DESCRIPTION, descEdit.getText().toString());
                     uploadIntent.putExtra(UploadService.EXTRA_MIMETYPE, mimeType);
                     uploadIntent.putExtra(UploadService.EXTRA_EDIT_SUMMARY, "Mobile upload from Wikimedia Commons Android app");
+                    uploadIntent.putExtra(UploadService.EXTRA_SOURCE, source);
                     startService(uploadIntent);
                     Toast startingToast = Toast.makeText(that, R.string.uploading_started, Toast.LENGTH_LONG);
                     startingToast.show(); 
