@@ -1,7 +1,9 @@
 package org.wikimedia.beta.commons.contributions;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -234,6 +236,22 @@ public class ContributionsListFragment extends SherlockFragment {
                 reGenerateImageCaptureURI();
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, lastGeneratedCaptureURI);
                 startActivityForResult(takePictureIntent, SELECT_FROM_CAMERA);
+                return true;
+            case R.id.menu_update_beta:
+                // EXPERIMENTAL, YO! MIGHT NOT WORK ALL THE TIME
+                AlertDialog alertDialog = new AlertDialog.Builder(getActivity())
+                        .setMessage(R.string.beta_update_message)
+                        .setTitle(R.string.beta_update_title)
+                        .setCancelable(false)
+                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent downloadUpdateIntent = new Intent(Intent.ACTION_VIEW);
+                                downloadUpdateIntent.setData(Uri.parse("http://integration.mediawiki.org/nightly/mobile/android-commons/android-commons_latest.apk"));
+                                startActivity(downloadUpdateIntent);
+                            }
+                        })
+                        .create();
+                alertDialog.show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

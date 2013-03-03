@@ -11,4 +11,8 @@
         android:showAsAction="always|withText"
         android:icon="@android:drawable/ic_menu_gallery"
             />
+    <item android:id="@+id/menu_update_beta"
+          android:title="@string/menu_update_beta"
+          android:showAsAction="never"
+          />
 </menu>
