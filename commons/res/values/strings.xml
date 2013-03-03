@@ -50,7 +50,7 @@
     <string name="login_failed_generic">Login failed</string>
 
     <string name="share_upload_button">Upload</string>
-    <string name="menu_update_beta">Update</string>
+    <string name="menu_update_beta">Update App</string>
     <string name="beta_update_message">This downloads the latest version of the beta. You will need to manually tap on
         the downloaded file in your notifications area to start installation.
     </string>
