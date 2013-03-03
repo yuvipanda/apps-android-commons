@@ -1,8 +1,7 @@
-package org.wikimedia.commons;
+package org.wikimedia.beta.commons;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.StringWriter;
 import java.net.URI;
 
 import android.accounts.*;
@@ -21,12 +20,11 @@ import com.nostra13.universalimageloader.utils.StorageUtils;
 import org.acra.ACRA;
 import org.acra.ReportingInteractionMode;
 import org.acra.annotation.ReportsCrashes;
-import org.apache.http.client.HttpClient;
 import org.mediawiki.api.*;
-import org.wikimedia.commons.auth.WikiAccountAuthenticator;
+import org.wikimedia.beta.commons.auth.WikiAccountAuthenticator;
 import org.apache.http.impl.client.*;
 import org.apache.http.params.CoreProtocolPNames;
-import org.wikimedia.commons.data.*;
+import org.wikimedia.beta.commons.data.*;
 
 // TODO: Use ProGuard to rip out reporting when publishing
 @ReportsCrashes(formKey = "",

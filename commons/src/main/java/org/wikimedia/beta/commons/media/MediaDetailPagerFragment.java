@@ -1,4 +1,4 @@
-package org.wikimedia.commons.media;
+package org.wikimedia.beta.commons.media;
 
 import android.content.*;
 import android.net.*;
@@ -14,7 +14,7 @@ import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.widget.ShareActionProvider;
 
-import org.wikimedia.commons.*;
+import org.wikimedia.beta.commons.*;
 
 public class MediaDetailPagerFragment extends SherlockFragment {
     private ViewPager pager;

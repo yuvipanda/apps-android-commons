@@ -1,4 +1,4 @@
-package org.wikimedia.commons;
+package org.wikimedia.beta.commons;
 
 import java.io.*;
 import java.util.Date;
@@ -13,11 +13,11 @@ import android.support.v4.app.NotificationCompat;
 import android.util.*;
 import android.widget.*;
 
-import org.wikimedia.commons.contributions.*;
+import org.wikimedia.beta.commons.contributions.*;
 
 public class UploadService extends HandlerService<Contribution> {
 
-    private static final String EXTRA_PREFIX = "org.wikimedia.commons.upload";
+    private static final String EXTRA_PREFIX = "org.wikimedia.beta.commons.upload";
 
     public static final int ACTION_UPLOAD_FILE = 1;
 

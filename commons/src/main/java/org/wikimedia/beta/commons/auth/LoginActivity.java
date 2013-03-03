@@ -1,4 +1,4 @@
-package org.wikimedia.commons.auth;
+package org.wikimedia.beta.commons.auth;
 
 import java.io.IOException;
 
@@ -13,14 +13,14 @@ import android.view.*;
 import android.widget.*;
 import android.support.v4.app.NavUtils;
 
-import org.wikimedia.commons.*;
-import org.wikimedia.commons.EventLog;
-import org.wikimedia.commons.contributions.*;
+import org.wikimedia.beta.commons.*;
+import org.wikimedia.beta.commons.EventLog;
+import org.wikimedia.beta.commons.contributions.*;
 
 
 public class LoginActivity extends AccountAuthenticatorActivity {
 
-    public static final String PARAM_USERNAME = "org.wikimedia.commons.login.username";
+    public static final String PARAM_USERNAME = "org.wikimedia.beta.commons.login.username";
 
     private CommonsApplication app;
 

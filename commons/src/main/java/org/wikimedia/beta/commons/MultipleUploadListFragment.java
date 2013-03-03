@@ -1,4 +1,4 @@
-package org.wikimedia.commons;
+package org.wikimedia.beta.commons;
 
 import android.content.*;
 import android.graphics.*;
@@ -12,8 +12,8 @@ import android.widget.*;
 import com.actionbarsherlock.app.SherlockFragment;
 import com.nostra13.universalimageloader.core.*;
 
-import org.wikimedia.commons.contributions.*;
-import org.wikimedia.commons.media.*;
+import org.wikimedia.beta.commons.contributions.*;
+import org.wikimedia.beta.commons.media.*;
 
 
 public class MultipleUploadListFragment extends SherlockFragment {

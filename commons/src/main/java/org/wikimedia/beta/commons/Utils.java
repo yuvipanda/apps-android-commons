@@ -1,4 +1,4 @@
-package org.wikimedia.commons;
+package org.wikimedia.beta.commons;
 
 import android.os.*;
 import com.nostra13.universalimageloader.core.*;

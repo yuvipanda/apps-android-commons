@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.wikimedia.commons"
+    package="org.wikimedia.beta.commons"
     android:versionCode="5"
     android:versionName="1.0beta5" >
 
@@ -21,7 +21,7 @@
     <application
         android:name=".CommonsApplication"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
+        android:label="@string/app_name_beta"
         android:theme="@style/AppTheme" >
         <activity android:name="org.acra.CrashReportDialog"
                   android:theme="@android:style/Theme.Dialog"
@@ -65,7 +65,7 @@
         <activity
                 android:name=".contributions.ContributionsActivity"
                 android:icon="@drawable/ic_launcher"
-                android:label="@string/app_name"
+                android:label="@string/app_name_beta"
                 android:uiOptions="splitActionBarWhenNarrow"
                  >
             <intent-filter>
@@ -103,7 +103,7 @@
                 android:name=".contributions.ContributionsContentProvider"
                 android:label="@string/provider_contributions"
                 android:syncable="true"
-                android:authorities="org.wikimedia.commons.contributions.contentprovider"
+                android:authorities="org.wikimedia.beta.commons.contributions.contentprovider"
                 android:exported="false">
         </provider>
     </application>

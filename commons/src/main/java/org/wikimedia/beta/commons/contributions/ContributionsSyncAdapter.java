@@ -1,4 +1,4 @@
-package org.wikimedia.commons.contributions;
+package org.wikimedia.beta.commons.contributions;
 
 import android.content.*;
 import android.database.Cursor;
@@ -12,9 +12,8 @@ import java.io.*;
 import java.util.*;
 
 import org.mediawiki.api.*;
-import org.wikimedia.commons.Utils;
-import org.wikimedia.commons.*;
-
+import org.wikimedia.beta.commons.Utils;
+import org.wikimedia.beta.commons.*;
 
 public class ContributionsSyncAdapter extends AbstractThreadedSyncAdapter {
     private static int COMMIT_THRESHOLD = 10;

@@ -1,4 +1,4 @@
-package org.wikimedia.commons.contributions;
+package org.wikimedia.beta.commons.contributions;
 
 import android.os.IBinder;
 import android.support.v4.app.FragmentManager;
@@ -14,9 +14,9 @@ import android.widget.AdapterView;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 
-import org.wikimedia.commons.*;
-import org.wikimedia.commons.auth.*;
-import org.wikimedia.commons.media.*;
+import org.wikimedia.beta.commons.*;
+import org.wikimedia.beta.commons.auth.*;
+import org.wikimedia.beta.commons.media.*;
 
 public  class       ContributionsActivity
         extends     AuthenticatedActivity

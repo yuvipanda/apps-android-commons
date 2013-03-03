@@ -1,4 +1,4 @@
-package org.wikimedia.commons;
+package org.wikimedia.beta.commons;
 
 import android.app.*;
 import android.content.*;
@@ -12,8 +12,8 @@ import com.actionbarsherlock.view.MenuItem;
 import android.widget.*;
 import android.view.*;
 
-import org.wikimedia.commons.contributions.*;
-import org.wikimedia.commons.auth.*;
+import org.wikimedia.beta.commons.contributions.*;
+import org.wikimedia.beta.commons.auth.*;
 
 
 public class ShareActivity extends AuthenticatedActivity {

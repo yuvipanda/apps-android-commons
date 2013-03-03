@@ -1,4 +1,4 @@
-package org.wikimedia.commons.media;
+package org.wikimedia.beta.commons.media;
 
 import android.graphics.*;
 import android.os.*;
@@ -11,7 +11,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.assist.ImageLoadingListener;
 
-import org.wikimedia.commons.*;
+import org.wikimedia.beta.commons.*;
 
 public class MediaDetailFragment extends SherlockFragment {
 

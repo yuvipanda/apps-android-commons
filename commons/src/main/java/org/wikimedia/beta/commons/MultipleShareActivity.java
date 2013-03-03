@@ -1,4 +1,4 @@
-package org.wikimedia.commons;
+package org.wikimedia.beta.commons;
 
 import java.util.*;
 import java.util.concurrent.*;
@@ -14,9 +14,9 @@ import android.widget.*;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 
-import org.wikimedia.commons.auth.*;
-import org.wikimedia.commons.contributions.*;
-import org.wikimedia.commons.media.*;
+import org.wikimedia.beta.commons.auth.*;
+import org.wikimedia.beta.commons.contributions.*;
+import org.wikimedia.beta.commons.media.*;
 
 public  class       MultipleShareActivity
         extends     AuthenticatedActivity
