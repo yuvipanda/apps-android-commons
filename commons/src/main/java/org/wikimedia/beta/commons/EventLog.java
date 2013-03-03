@@ -1,10 +1,8 @@
-package org.wikimedia.commons;
+package org.wikimedia.beta.commons;
 
 import android.os.AsyncTask;
 import android.os.Build;
-import android.text.TextUtils;
 import de.akquinet.android.androlog.Log;
-import org.apache.http.client.utils.URLEncodedUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
 

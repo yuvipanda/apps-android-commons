@@ -1,4 +1,4 @@
-package org.wikimedia.commons.contributions;
+package org.wikimedia.beta.commons.contributions;
 
 import android.app.Service;
 import android.content.Intent;

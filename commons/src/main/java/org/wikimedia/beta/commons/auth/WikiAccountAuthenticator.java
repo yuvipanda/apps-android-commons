@@ -1,10 +1,9 @@
-package org.wikimedia.commons.auth;
+package org.wikimedia.beta.commons.auth;
 
 import java.io.IOException;
 
-import org.mediawiki.api.ApiResult;
 import org.mediawiki.api.MWApi;
-import org.wikimedia.commons.CommonsApplication;
+import org.wikimedia.beta.commons.CommonsApplication;
 
 import android.accounts.AbstractAccountAuthenticator;
 import android.accounts.Account;
@@ -14,11 +13,10 @@ import android.accounts.NetworkErrorException;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 
 public class WikiAccountAuthenticator extends AbstractAccountAuthenticator {
 
-    public static final String COMMONS_ACCOUNT_TYPE = "org.wikimedia.commons";
+    public static final String COMMONS_ACCOUNT_TYPE = "org.wikimedia.beta.commons";
     private Context context;
     public WikiAccountAuthenticator(Context context) {
         super(context);

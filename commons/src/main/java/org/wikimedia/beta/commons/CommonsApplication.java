@@ -1,42 +1,29 @@
-package org.wikimedia.commons;
+package org.wikimedia.beta.commons;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.StringWriter;
 import java.net.URI;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import javax.xml.transform.*;
 
 import android.accounts.*;
 import android.app.Application;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Build;
 
 import com.nostra13.universalimageloader.cache.disc.impl.TotalSizeLimitedDiscCache;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.download.HttpClientImageDownloader;
-import com.nostra13.universalimageloader.core.download.ImageDownloader;
 import com.nostra13.universalimageloader.core.download.URLConnectionImageDownloader;
 import com.nostra13.universalimageloader.utils.StorageUtils;
 import org.acra.ACRA;
 import org.acra.ReportingInteractionMode;
 import org.acra.annotation.ReportsCrashes;
-import org.apache.http.client.HttpClient;
 import org.mediawiki.api.*;
-import org.w3c.dom.Node;
-import org.wikimedia.commons.auth.WikiAccountAuthenticator;
-import org.apache.http.HttpVersion;
-import org.apache.http.conn.ConnectionKeepAliveStrategy;
+import org.wikimedia.beta.commons.auth.WikiAccountAuthenticator;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.CoreProtocolPNames;
-import org.wikimedia.commons.data.DBOpenHelper;
+import org.wikimedia.beta.commons.data.DBOpenHelper;
 
 // TODO: Use ProGuard to rip out reporting when publishing
 @ReportsCrashes(formKey = "",

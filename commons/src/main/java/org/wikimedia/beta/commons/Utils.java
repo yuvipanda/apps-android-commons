@@ -1,8 +1,7 @@
-package org.wikimedia.commons;
+package org.wikimedia.beta.commons;
 
 import android.os.AsyncTask;
 import android.os.Build;
-import org.apache.commons.codec.EncoderException;
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.codec.net.URLCodec;

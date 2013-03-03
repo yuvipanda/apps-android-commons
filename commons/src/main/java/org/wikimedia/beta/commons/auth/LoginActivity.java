@@ -1,4 +1,4 @@
-package org.wikimedia.commons.auth;
+package org.wikimedia.beta.commons.auth;
 
 import java.io.IOException;
 
@@ -7,13 +7,10 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
-import org.wikimedia.commons.CommonsApplication;
-import org.wikimedia.commons.EventLog;
-import org.wikimedia.commons.R;
-import org.wikimedia.commons.R.id;
-import org.wikimedia.commons.R.layout;
-import org.wikimedia.commons.R.menu;
-import org.wikimedia.commons.R.string;
+import org.wikimedia.beta.commons.CommonsApplication;
+import org.wikimedia.beta.commons.EventLog;
+import org.wikimedia.beta.commons.R;
+import org.wikimedia.beta.commons.R.id;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -29,11 +26,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import android.support.v4.app.NavUtils;
-import org.wikimedia.commons.contributions.ContributionsContentProvider;
+import org.wikimedia.beta.commons.contributions.ContributionsContentProvider;
 
 public class LoginActivity extends AccountAuthenticatorActivity {
 
-    public static final String PARAM_USERNAME = "org.wikimedia.commons.login.username";
+    public static final String PARAM_USERNAME = "org.wikimedia.beta.commons.login.username";
 
     private CommonsApplication app;
 

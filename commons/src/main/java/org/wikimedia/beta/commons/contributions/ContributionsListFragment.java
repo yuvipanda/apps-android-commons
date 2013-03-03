@@ -1,4 +1,4 @@
-package org.wikimedia.commons.contributions;
+package org.wikimedia.beta.commons.contributions;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.widget.CursorAdapter;
-import android.text.AndroidCharacter;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -28,10 +27,10 @@ import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.assist.ImageLoadingListener;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
-import org.wikimedia.commons.R;
-import org.wikimedia.commons.ShareActivity;
-import org.wikimedia.commons.UploadService;
-import org.wikimedia.commons.Utils;
+import org.wikimedia.beta.commons.R;
+import org.wikimedia.beta.commons.ShareActivity;
+import org.wikimedia.beta.commons.UploadService;
+import org.wikimedia.beta.commons.Utils;
 
 import java.io.File;
 import java.io.IOException;

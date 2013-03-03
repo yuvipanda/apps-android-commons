@@ -1,11 +1,9 @@
-package org.wikimedia.commons;
+package org.wikimedia.beta.commons;
 
 import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
-import org.wikimedia.commons.contributions.Contribution;
 
-import java.io.Serializable;
 import java.util.Date;
 
 public class Media implements Parcelable {

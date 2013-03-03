@@ -1,30 +1,25 @@
-package org.wikimedia.commons;
+package org.wikimedia.beta.commons;
 
 import java.io.*;
 import java.util.Date;
 
 import android.graphics.BitmapFactory;
 import org.mediawiki.api.*;
-import org.wikimedia.commons.contributions.Contribution;
-import org.wikimedia.commons.contributions.ContributionsActivity;
-import org.wikimedia.commons.contributions.ContributionsContentProvider;
+import org.wikimedia.beta.commons.contributions.Contribution;
+import org.wikimedia.beta.commons.contributions.ContributionsActivity;
+import org.wikimedia.beta.commons.contributions.ContributionsContentProvider;
 
 import in.yuvi.http.fluent.ProgressListener;
 
 import android.app.*;
 import android.content.*;
-import android.database.Cursor;
-import android.os.*;
-import android.provider.MediaStore;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
-import android.widget.RemoteViews;
 import android.widget.Toast;
-import android.net.*;
 
 public class UploadService extends HandlerService<Contribution> {
 
-    private static final String EXTRA_PREFIX = "org.wikimedia.commons.upload";
+    private static final String EXTRA_PREFIX = "org.wikimedia.beta.commons.upload";
 
     public static final int ACTION_UPLOAD_FILE = 1;
 

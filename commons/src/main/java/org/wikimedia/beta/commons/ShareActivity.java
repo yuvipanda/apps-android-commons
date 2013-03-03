@@ -1,4 +1,4 @@
-package org.wikimedia.commons;
+package org.wikimedia.beta.commons;
 
 import android.content.ComponentName;
 import android.content.ServiceConnection;
@@ -8,10 +8,9 @@ import android.os.IBinder;
 import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import org.wikimedia.commons.auth.AuthenticatedActivity;
-import org.wikimedia.commons.auth.WikiAccountAuthenticator;
+import org.wikimedia.beta.commons.auth.AuthenticatedActivity;
+import org.wikimedia.beta.commons.auth.WikiAccountAuthenticator;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -21,10 +20,9 @@ import android.widget.ImageView;
 import android.support.v4.app.NavUtils;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
-import com.actionbarsherlock.view.Window;
 import android.widget.*;
 import android.view.*;
-import org.wikimedia.commons.contributions.Contribution;
+import org.wikimedia.beta.commons.contributions.Contribution;
 
 import java.io.IOException;
 import java.util.Date;

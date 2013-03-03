@@ -1,4 +1,4 @@
-package org.wikimedia.commons.media;
+package org.wikimedia.beta.commons.media;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -15,11 +15,10 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.assist.ImageLoadingListener;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
-import com.nostra13.universalimageloader.core.assist.SimpleImageLoadingListener;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
-import org.wikimedia.commons.Media;
-import org.wikimedia.commons.R;
-import org.wikimedia.commons.Utils;
+import org.wikimedia.beta.commons.Media;
+import org.wikimedia.beta.commons.R;
+import org.wikimedia.beta.commons.Utils;
 
 public class MediaDetailFragment extends SherlockFragment {
 

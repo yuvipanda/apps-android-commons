@@ -1,4 +1,4 @@
-package org.wikimedia.commons.auth;
+package org.wikimedia.beta.commons.auth;
 
 import android.app.Service;
 import android.content.Intent;

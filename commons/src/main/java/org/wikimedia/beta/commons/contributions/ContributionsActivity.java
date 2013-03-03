@@ -1,10 +1,6 @@
-package org.wikimedia.commons.contributions;
+package org.wikimedia.beta.commons.contributions;
 
-import android.*;
-import android.net.Uri;
-import android.os.Environment;
 import android.os.IBinder;
-import android.provider.MediaStore;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
@@ -17,15 +13,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
-import org.wikimedia.commons.*;
-import org.wikimedia.commons.R;
-import org.wikimedia.commons.auth.AuthenticatedActivity;
-import org.wikimedia.commons.auth.WikiAccountAuthenticator;
-import org.wikimedia.commons.media.MediaDetailPagerFragment;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.Date;
+import org.wikimedia.beta.commons.*;
+import org.wikimedia.beta.commons.R;
+import org.wikimedia.beta.commons.auth.AuthenticatedActivity;
+import org.wikimedia.beta.commons.auth.WikiAccountAuthenticator;
+import org.wikimedia.beta.commons.media.MediaDetailPagerFragment;
 
 public  class       ContributionsActivity
         extends     AuthenticatedActivity

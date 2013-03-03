@@ -1,9 +1,9 @@
-package org.wikimedia.commons.data;
+package org.wikimedia.beta.commons.data;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import org.wikimedia.commons.contributions.Contribution;
+import org.wikimedia.beta.commons.contributions.Contribution;
 
 public class DBOpenHelper  extends SQLiteOpenHelper{
 

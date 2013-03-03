@@ -1,4 +1,4 @@
-package org.wikimedia.commons.contributions;
+package org.wikimedia.beta.commons.contributions;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -11,9 +11,9 @@ import android.net.*;
 import android.os.Parcel;
 import android.os.RemoteException;
 import android.text.TextUtils;
-import org.wikimedia.commons.CommonsApplication;
-import org.wikimedia.commons.EventLog;
-import org.wikimedia.commons.Media;
+import org.wikimedia.beta.commons.CommonsApplication;
+import org.wikimedia.beta.commons.EventLog;
+import org.wikimedia.beta.commons.Media;
 
 public class Contribution extends Media {
 

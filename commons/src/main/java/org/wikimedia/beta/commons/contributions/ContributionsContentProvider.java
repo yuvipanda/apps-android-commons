@@ -1,4 +1,4 @@
-package org.wikimedia.commons.contributions;
+package org.wikimedia.beta.commons.contributions;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
@@ -9,15 +9,15 @@ import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
-import org.wikimedia.commons.CommonsApplication;
-import org.wikimedia.commons.data.DBOpenHelper;
+import org.wikimedia.beta.commons.CommonsApplication;
+import org.wikimedia.beta.commons.data.DBOpenHelper;
 
 public class ContributionsContentProvider extends ContentProvider{
 
     private static final int CONTRIBUTIONS = 1;
     private static final int CONTRIBUTIONS_ID = 2;
 
-    public static final String AUTHORITY = "org.wikimedia.commons.contributions.contentprovider";
+    public static final String AUTHORITY = "org.wikimedia.beta.commons.contributions.contentprovider";
     private static final String BASE_PATH = "contributions";
 
     public static final Uri BASE_URI = Uri.parse("content://" + AUTHORITY + "/" + BASE_PATH);
