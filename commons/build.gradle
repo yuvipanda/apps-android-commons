@@ -1,0 +1,48 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.4'
+    }
+}
+apply plugin: 'android'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "http://yuvi.in/maven"
+    }
+
+}
+
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion "17.0.0"
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 16
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src/main']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+    }
+}
+
+configurations {
+    all*.exclude group: 'com.google.android', module: 'support-v4'
+}
+dependencies {
+    compile 'com.android.support:support-v4:13.0.0' 
+    compile 'com.actionbarsherlock:actionbarsherlock:4.3.1' 
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.8.2'
+    compile 'ch.acra:acra:4.4.0'
+    compile 'de.keyboardsurfer.android.widget:crouton:1.8.1'
+}
