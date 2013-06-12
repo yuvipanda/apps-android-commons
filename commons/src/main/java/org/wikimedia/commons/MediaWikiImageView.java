@@ -85,7 +85,8 @@ public class MediaWikiImageView extends ImageView {
             // Round it down to the nearest 320
             // Possible a similar size image has already been generated.
             // Reduces Server cache fragmentation, also increases chance of cache hit
-            mUrl = mMedia.getThumbnailUrl((width / 320) * 320);
+            // If width is less than 320, we just use that directly, to avoid a case of the Maths
+            mUrl = mMedia.getThumbnailUrl(width <= 320 ? width : (width / 320) * 320);
         }
 
         // if the URL to be loaded in this view is empty, cancel any old requests and clear the
