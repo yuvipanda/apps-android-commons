@@ -141,4 +141,15 @@ public class Utils {
         return string.substring(0,1).toUpperCase() + string.substring(1);
     }
 
+    public static String licenseTemplateFor(String license) {
+        if(license.equals(Prefs.Licenses.CC_BY)) {
+            return "{{self|cc-by}}";
+        } else if(license.equals(Prefs.Licenses.CC_BY_SA)) {
+            return "{{self|cc-by-sa}}";
+        } else if(license.equals(Prefs.Licenses.CC0)) {
+            return "{{self|cc0}}";
+        }
+        throw new RuntimeException("Unrecognized license value");
+    }
+
 }
