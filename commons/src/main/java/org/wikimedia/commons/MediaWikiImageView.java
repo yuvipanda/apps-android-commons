@@ -93,7 +93,7 @@ public class MediaWikiImageView extends ImageView {
         // Do not count for density when loading thumbnails.
         // FIXME: Use another 'algorithm' that doesn't punish low res devices
         if(isThumbnail) {
-            float dpFactor = getResources().getDisplayMetrics().density;
+            float dpFactor =  Math.max(getResources().getDisplayMetrics().density, 1.0f);
             width = (int) (width / dpFactor);
             height = (int) (height / dpFactor);
         }
