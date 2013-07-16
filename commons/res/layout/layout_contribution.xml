@@ -5,7 +5,6 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
-              android:padding="2dp"
               android:paddingBottom="0dp"
         >
 
@@ -13,9 +12,10 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:textSize="98sp"
-              android:textColor="#33FFFFFF"
-              android:typeface="serif"
+              android:textColor="#FFCCCCCC"
+              android:typeface="sans"
               android:layout_gravity="end|bottom"
+
             />
     <org.wikimedia.commons.MediaWikiImageView android:id="@+id/contributionImage"
                android:layout_width="fill_parent"
