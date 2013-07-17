@@ -210,23 +210,26 @@ public class ContributionsListFragment extends SherlockFragment {
         String storageState = Environment.getExternalStorageState();
         if(storageState.equals(Environment.MEDIA_MOUNTED)) {
 
-            String path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Commons/images/" + new Date().getTime() + ".jpg";
-            File _photoFile = new File(path);
+            File photoFile = new File(
+                    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
+                    "Commons/" + new Date().getTime() + ".jpg"
+            );
             try {
-                if(_photoFile.exists() == false) {
-                    _photoFile.getParentFile().mkdirs();
-                    _photoFile.createNewFile();
+                if(photoFile.exists() == false) {
+                    photoFile.getParentFile().mkdirs();
+                    photoFile.createNewFile();
                 }
 
             } catch (IOException e) {
-                Log.e("Commons", "Could not create file: " + path, e);
+                Log.e("Commons", "Could not create file: " + photoFile.getAbsolutePath(), e);
             }
 
-            lastGeneratedCaptureURI = Uri.fromFile(_photoFile);
+            lastGeneratedCaptureURI = Uri.fromFile(photoFile);
         }   else {
             throw new RuntimeException("No external storage found!");
         }
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
