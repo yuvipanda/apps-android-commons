@@ -195,7 +195,16 @@ public class ContributionsListFragment extends SherlockFragment {
                     shareIntent.setAction(Intent.ACTION_SEND);
                     Log.d("Commons", "Uri is " + lastGeneratedCaptureURI);
                     shareIntent.setType("image/jpeg"); //FIXME: Find out appropriate mime type
-                    shareIntent.putExtra(Intent.EXTRA_STREAM, lastGeneratedCaptureURI);
+                    String contentUri;
+                    try {
+                        contentUri = MediaStore.Images.Media.insertImage(
+                                getActivity().getContentResolver(),
+                                lastGeneratedCaptureURI.getPath(), "", ""
+                        );
+                    } catch (FileNotFoundException e) {
+                        throw new RuntimeException(e); // This better not happen!
+                    }
+                    shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse(contentUri));
                     shareIntent.putExtra(UploadService.EXTRA_SOURCE, Contribution.SOURCE_CAMERA);
                     startActivity(shareIntent);
                 }

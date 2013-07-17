@@ -203,8 +203,7 @@ public  class       ShareActivity
                 public void onClick(View view) {
                     Intent showImageIntent = new Intent();
                     showImageIntent.setAction(Intent.ACTION_VIEW);
-                    showImageIntent.setData(mediaUri);
-                    showImageIntent.setType(getIntent().getType());
+                    showImageIntent.setDataAndType(mediaUri, "image/jpeg");
                     startActivity(showImageIntent);
                 }
             });
