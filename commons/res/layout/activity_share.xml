@@ -5,7 +5,7 @@
         >
     
     <ImageView
-        android:id="@+id/backgroundImage"
+        android:id="@+id/shareImage"
         android:layout_width="match_parent"
         android:layout_height="144dp"
         android:scaleType="centerCrop" />

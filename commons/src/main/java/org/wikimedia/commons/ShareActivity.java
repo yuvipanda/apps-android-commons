@@ -186,7 +186,7 @@ public  class       ShareActivity
         
         app = (CommonsApplication)this.getApplicationContext();
         
-        backgroundImageView = (ImageView)findViewById(R.id.backgroundImage);
+        backgroundImageView = (ImageView)findViewById(R.id.shareImage);
 
         Intent intent = getIntent();
 
@@ -199,6 +199,15 @@ public  class       ShareActivity
             }
 
             mimeType = intent.getType();
+            backgroundImageView.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View view) {
+                    Intent showImageIntent = new Intent();
+                    showImageIntent.setAction(Intent.ACTION_VIEW);
+                    showImageIntent.setData(mediaUri);
+                    showImageIntent.setType(getIntent().getType());
+                    startActivity(showImageIntent);
+                }
+            });
         }
 
         ImageLoader.getInstance().displayImage(mediaUri.toString(), backgroundImageView);
