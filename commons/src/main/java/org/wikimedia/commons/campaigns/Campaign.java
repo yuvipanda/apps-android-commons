@@ -46,13 +46,14 @@ public class Campaign {
         return config;
     }
 
-    public Campaign(JSONObject config) {
+    public Campaign(String name, JSONObject config) {
         this.config = config;
+        this.name = name;
         if(config.has("autoAdd")) {
-            this.autoAddWikitext = config.optJSONObject("config").optString("wikitext", null);
-            if(config.optJSONObject("config").has("categories")) {
+            this.autoAddWikitext = config.optJSONObject("autoAdd").optString("wikitext", null);
+            if(config.optJSONObject("autoAdd").has("categories")) {
                 this.autoAddCategories = new ArrayList<String>();
-                JSONArray catsArray = config.optJSONObject("config").optJSONArray("categories");
+                JSONArray catsArray = config.optJSONObject("autoAdd").optJSONArray("categories");
                 for(int i=0; i < catsArray.length(); i++) {
                     autoAddCategories.add(catsArray.optString(i));
                 }
