@@ -8,9 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.actionbarsherlock.app.SherlockActivity;
 import com.viewpagerindicator.CirclePageIndicator;
 
-public class WelcomeActivity extends Activity {
+public class WelcomeActivity extends SherlockActivity {
     static final int PAGE_WIKIPEDIA = 0,
             PAGE_COPYRIGHT = 1,
             PAGE_FINAL = 2;
