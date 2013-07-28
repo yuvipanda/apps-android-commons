@@ -5,16 +5,13 @@ import android.content.ContentProviderClient;
 import android.content.Context;
 import android.database.Cursor;
 import android.os.*;
+import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.*;
 import android.view.MenuInflater;
 import android.widget.*;
-import com.actionbarsherlock.app.SherlockFragment;
-import com.actionbarsherlock.view.*;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
 import org.mediawiki.api.ApiResult;
 import org.mediawiki.api.MWApi;
 import org.wikimedia.commons.CommonsApplication;
@@ -32,7 +29,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 
-public class CategorizationFragment extends SherlockFragment{
+public class CategorizationFragment extends Fragment {
     public static interface OnCategoriesSaveHandler {
         public void onCategoriesSave(ArrayList<String> categories);
     }
@@ -217,7 +214,7 @@ public class CategorizationFragment extends SherlockFragment{
             CheckedTextView checkedView;
 
             if(view == null) {
-                checkedView = (CheckedTextView) getSherlockActivity().getLayoutInflater().inflate(R.layout.layout_categories_item, null);
+                checkedView = (CheckedTextView) getActivity().getLayoutInflater().inflate(R.layout.layout_categories_item, null);
 
             } else {
                 checkedView = (CheckedTextView) view;
@@ -358,7 +355,7 @@ public class CategorizationFragment extends SherlockFragment{
     }
 
     @Override
-    public void onCreateOptionsMenu(Menu menu, com.actionbarsherlock.view.MenuInflater inflater) {
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         menu.clear();
         inflater.inflate(R.menu.fragment_categorization, menu);
     }

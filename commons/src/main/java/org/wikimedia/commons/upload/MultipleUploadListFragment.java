@@ -4,14 +4,12 @@ import android.content.*;
 import android.graphics.*;
 import android.net.*;
 import android.os.*;
+import android.support.v4.app.Fragment;
 import android.text.*;
 import android.util.*;
 import android.view.*;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.*;
-import com.actionbarsherlock.app.SherlockFragment;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
 import com.nostra13.universalimageloader.core.*;
 
 import org.wikimedia.commons.R;
@@ -20,7 +18,7 @@ import org.wikimedia.commons.contributions.*;
 import org.wikimedia.commons.media.*;
 
 
-public class MultipleUploadListFragment extends SherlockFragment {
+public class MultipleUploadListFragment extends Fragment {
 
     public interface OnMultipleUploadInitiatedHandler {
         public void OnMultipleUploadInitiated();
@@ -183,7 +181,7 @@ public class MultipleUploadListFragment extends SherlockFragment {
     }
 
     @Override
-    public void onCreateOptionsMenu(Menu menu, com.actionbarsherlock.view.MenuInflater inflater) {
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
         menu.clear();
         inflater.inflate(R.menu.fragment_multiple_upload_list, menu);

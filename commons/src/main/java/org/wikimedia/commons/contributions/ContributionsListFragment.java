@@ -11,17 +11,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.v4.app.Fragment;
 import android.support.v4.widget.CursorAdapter;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.*;
 import android.widget.*;
-import com.actionbarsherlock.app.SherlockFragment;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 
@@ -35,7 +30,7 @@ import org.wikimedia.commons.R;
 import org.wikimedia.commons.upload.ShareActivity;
 import org.wikimedia.commons.upload.UploadService;
 
-public class ContributionsListFragment extends SherlockFragment {
+public class ContributionsListFragment extends Fragment {
 
     private final static int SELECT_FROM_GALLERY = 1;
     private final static int SELECT_FROM_CAMERA = 2;

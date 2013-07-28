@@ -3,14 +3,13 @@ package org.wikimedia.commons.auth;
 import java.io.IOException;
 
 import android.accounts.OperationCanceledException;
-import com.actionbarsherlock.app.*;
-
 import android.accounts.*;
 import android.os.*;
 
+import android.support.v7.app.ActionBarActivity;
 import org.wikimedia.commons.*;
 
-public class AuthenticatedActivity extends SherlockFragmentActivity {
+public class AuthenticatedActivity extends ActionBarActivity {
     
     
     String accountType;

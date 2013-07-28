@@ -3,10 +3,10 @@ package org.wikimedia.commons.upload;
 import android.app.*;
 import android.content.*;
 import android.os.*;
+import android.view.MenuItem;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import android.net.*;
 import android.support.v4.app.NavUtils;
-import com.actionbarsherlock.view.MenuItem;
 import android.widget.*;
 
 import org.wikimedia.commons.*;

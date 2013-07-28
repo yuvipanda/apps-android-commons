@@ -12,7 +12,6 @@ import android.text.*;
 import android.view.*;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.*;
-import com.actionbarsherlock.view.MenuItem;
 
 import org.wikimedia.commons.*;
 import org.wikimedia.commons.auth.*;

@@ -2,12 +2,11 @@ package org.wikimedia.commons.media;
 
 import android.graphics.*;
 import android.os.*;
+import android.support.v4.app.Fragment;
 import android.text.*;
 import android.util.Log;
 import android.view.*;
 import android.widget.*;
-import com.actionbarsherlock.app.SherlockFragment;
-import com.android.volley.toolbox.NetworkImageView;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.assist.ImageLoadingListener;
@@ -16,7 +15,7 @@ import com.android.volley.toolbox.*;
 
 import org.wikimedia.commons.*;
 
-public class MediaDetailFragment extends SherlockFragment {
+public class MediaDetailFragment extends Fragment {
 
     private boolean editable;
     private DisplayImageOptions displayOptions;

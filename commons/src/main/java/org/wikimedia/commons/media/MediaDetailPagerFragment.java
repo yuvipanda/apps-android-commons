@@ -11,23 +11,18 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.*;
-import com.actionbarsherlock.app.SherlockFragment;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
-import com.actionbarsherlock.widget.ShareActionProvider;
 
 import org.wikimedia.commons.*;
 import org.wikimedia.commons.contributions.Contribution;
 import org.wikimedia.commons.contributions.ContributionsActivity;
 
-public class MediaDetailPagerFragment extends SherlockFragment implements ViewPager.OnPageChangeListener {
+public class MediaDetailPagerFragment extends Fragment implements ViewPager.OnPageChangeListener {
     private ViewPager pager;
     private Boolean editable;
     private CommonsApplication app;
 
     public void onPageScrolled(int i, float v, int i2) {
-        getSherlockActivity().supportInvalidateOptionsMenu();
+        getActivity().supportInvalidateOptionsMenu();
     }
 
     public void onPageSelected(int i) {
@@ -54,7 +49,7 @@ public class MediaDetailPagerFragment extends SherlockFragment implements ViewPa
                 // See bug https://code.google.com/p/android/issues/detail?id=27526
                 pager.postDelayed(new Runnable() {
                     public void run() {
-                        getSherlockActivity().supportInvalidateOptionsMenu();
+                        getActivity().supportInvalidateOptionsMenu();
                     }
                 }, 5);
             }
@@ -88,7 +83,7 @@ public class MediaDetailPagerFragment extends SherlockFragment implements ViewPa
             view.postDelayed(new Runnable() {
                 public void run() {
                     pager.setCurrentItem(pageNumber, false);
-                    getSherlockActivity().supportInvalidateOptionsMenu();
+                    getActivity().supportInvalidateOptionsMenu();
                 }
             }, 100);
         }
@@ -114,7 +109,7 @@ public class MediaDetailPagerFragment extends SherlockFragment implements ViewPa
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        MediaDetailProvider provider = (MediaDetailProvider)getSherlockActivity();
+        MediaDetailProvider provider = (MediaDetailProvider)getActivity();
         Media m = provider.getMediaAtPosition(pager.getCurrentItem());
         switch(item.getItemId()) {
             case R.id.menu_share_current_image:
@@ -140,12 +135,12 @@ public class MediaDetailPagerFragment extends SherlockFragment implements ViewPa
             case R.id.menu_retry_current_image:
                 // Is this... sane? :)
                 ((ContributionsActivity)getActivity()).retryUpload(pager.getCurrentItem());
-                getSherlockActivity().getSupportFragmentManager().popBackStack();
+                getActivity().getSupportFragmentManager().popBackStack();
                 return true;
             case R.id.menu_abort_current_image:
                 // todo: delete image
                 ((ContributionsActivity)getActivity()).deleteUpload(pager.getCurrentItem());
-                getSherlockActivity().getSupportFragmentManager().popBackStack();
+                getActivity().getSupportFragmentManager().popBackStack();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -226,7 +221,7 @@ public class MediaDetailPagerFragment extends SherlockFragment implements ViewPa
             menu.clear(); // see http://stackoverflow.com/a/8495697/17865
             inflater.inflate(R.menu.fragment_image_detail, menu);
             if(pager != null) {
-                MediaDetailProvider provider = (MediaDetailProvider)getSherlockActivity();
+                MediaDetailProvider provider = (MediaDetailProvider)getActivity();
                 Media m = provider.getMediaAtPosition(pager.getCurrentItem());
                 if(m != null && !m.getFilename().startsWith("File:")) {
                     // Crude way of checking if the file has been successfully saved!
