@@ -1,3 +1,5 @@
+**Archived**: Now lives in https://commons-app.github.io/
+
 # The Wikimedia Commons Android App #
 
 ## Build Requirements ##
